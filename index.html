@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company Oboskalova's</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <img class="logo" src="img/logo.png" alt="Упппс">
+                <div class="header-inner">
+                    <div class="LeftCont">
+                        <div class="offer">
+                            <h3>
+                                С помощью нас вы сможете создать то, о
+                                чем <span class="span1">желаете!</span> </h3>
+                            <p class="h4">Наши возможности + опыт позволят Вам достичь огромного успеха. Мы верим в
+                                Вас! И
+                                знаем это на все 100%! Вас не остановить!</p>
+                            <div>
+                                <button class="button">Узнать больше...</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="RightCont">
+                        <img src="img/header-img.png" alt="Упппс" width="320">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="needs">
+            <div class="container">
+                <h2 class="needs1">Что вам необходимо?</h2>
+                <div class="needs2">
+                    <div class="needs2-item">
+                        <div class="needimg"><img src="img/f3.png" alt=""></div>
+                        <div class="needB">Первый блок</div>
+                        <div class="needLo">Lorem ipsum, dolor sit amet consectetur adipisicing elit?</div>
+                    </div>
+                    <div class="needs2-item">
+                        <div class="needimg"><img src="img/f4.png" alt=""></div>
+                        <div class="needB">Второй блок</div>
+                        <div class="needLo">Lorem ipsum, dolor sit amet consectetur adipisicing elit?
+                        </div>
+                    </div>
+                    <div class="needs2-item">
+                        <div class="needimg"><img src="img/f5.png" alt=""></div>
+                        <div class="needB">Третий блок</div>
+                        <div class="needLo">Lorem ipsum, dolor sit amet consectetur adipisicing elit?</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="wrapper">
+            <!--Header with Logo strats here-->
+            <div class="container-fluid">
+                <!--<div class="row">
+                    <div class="col-md-12 logo"><img src="https://thumbs.dreamstime.com/z/d-image-yellow-taxi-41596598.jpg"
+                            alt="logo" width="150" /></div>
+                </div>-->
+                <div class="row">
+                    <div class="text">Чтобы сделать заказ, заполните форму ниже...</div>
+                </div>
+            </div>
+            <!--End Header-->
+    
+            <!--Layout for the form starts here-->
+            <form id="form" action="#">
+                <div class="container">
+                    <div class="row">
+                        <!--Begining of the Main Form-->
+                        <div class="orderInfo">
+                            <h5>Информация о заказе</h5>
+                            <div class="row">
+                                <div class="">Имя:</div>
+                                <div class=""><input class="form-control" id="first" type="text"
+                                        onchange="checkFirst();" required /></div>
+                                <div class=""><span id="first_Check"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="">Фамилия:</div>
+                                <div class=""><input class="form-control" id="last" type="text"
+                                        onblur="checkLast();" required /></div>
+                                <div class=""><span id="last_Check"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="">Номер телефона:</div>
+                                <div class=""><input class="form-control" id="phone" type="text"
+                                        onblur="checkPhone();" placeholder="xxx-xxx-xxx" required /></div>
+                                <div class="col-md-4"><span id="phone_Check"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">Место подачи:</div>
+                                <div class="col-md-4"><input class="form-control" id="dest" type="text"
+                                        onblur="checkDest();" required /></div>
+                                <div class="col-md-4"><span id="dest_Check"></span></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">Дата и время:</div>
+                                <div class="col-md-4">
+                                    <input class="form-control" id="date" type="date" required />
+                                    <input class="form-control" id="time" type="time" required />
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">Количество:</div>
+                                <div class="col-md-4"><input class="form-control" id="quantity" type="number" min="1"
+                                        max="5" required /></div>
+                                <div class="col-md-4"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">Способ оплаты:</div>
+                                <div class="col-md-4">
+                                    <select class="form-control" name="paymethod" id="paymethod" required>
+                                        <option>Наличные</option>
+                                        <option>Карта</option>
+                                        <option>СБП</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 order"><span id="sendOrder" onclick="outputData();">Отправить</span>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <!--End of the form-->
+    
+                        <!--Order summary-->
+                        <div class="col-md-4 orderSummary">
+                            <div class="col-md-12">
+                                <h5>Информация о заказе</h5>
+                                <span id="summary"></span>
+                            </div>
+                        </div>
+                        <!--End of Order summary-->
+                    </div>
+                </div>
+            </form>
+            <!--End of Layout for the form-->
+    
+        </section>
+
+
+
+
+
+
+
+
+
+        <section class="forma">
+            <div class="container">
+                <div class="forma1">
+                    <div class="foHead">Форма обратного заказа</div>
+                    
+                    <input class="fo1" type="text" onchange="checkFirst();" required name="Name" id="first_Check" value="" placeholder="Имя" >
+                    <input class="fo1" type="text" name="E-mail" id="first" value="" placeholder="Напишите Ваш E-mail"
+                        required="">
+                    <input class="fo1" type="text" name="Phone" id="first" value="" placeholder="Телефон" required="">
+                    <input class="fo1" type="text" name="Tema" id="first" value=""
+                        placeholder="Какая тема вас интересует?" required="">
+                    <button class="foBut">Отправить вопрос!</button>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">© Всё на этом сайте защищено.
+        </footer>
+    </div>
+
+    <script src="JavaScript.js"></script>
+</body>
+
+</html>
